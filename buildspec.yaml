@@ -7,7 +7,7 @@ phases:
       nodejs: 14
   pre-build:
     commands:
-      - echo 'installing source npm dependencies'
+      - echo installing source npm dependencies
       - npm install
   build:
     commonds:
