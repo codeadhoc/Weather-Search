@@ -5,16 +5,16 @@ phases:
   install:
     runtime-versions:
       nodejs: 14
-  pre-build:
+  pre_build:
     commands:
-      - echo installing source npm dependencies
+      - echo installing dependencies...
       - npm install
   build:
-    commonds:
-      - echo build stage completed 'date'
+    commands:
+      - echo Build started on `date`
   post_build:
-    commonds:
-      - echo post build stage 'date'
+    commands:
+      - echo Build completed on `date`
 artifacts:
   files:
     - "**/*"
