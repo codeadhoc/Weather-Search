@@ -5,10 +5,10 @@ files:
    destination: /var/www/weatherapp
 hooks:
 BeforeInstall:
-   - location: bin/clean
+   - location: scripts/cleans
      timeout: 10
      runas: root
 AfterInstall:
-   - location: ./bin/app-start
+   - location: scripts/app-start.sh
      timeout: 1200
      runas: root
