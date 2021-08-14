@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+-  source: /
+   destination: /home/ec2-user/weatherapp
+
+permissions:
+- object: /
+   pattern: "**"
+   owner: ec2-user
+   group: ec2-user
+
+hooks:
+BeforeInstall:
+   - location: bin/clean.sh
+     timeout: 10
+     runas: ec2-user
+
+AfterInstall:
+   - location: bin/app-start.sh
+     timeout: 1200
+     runas: ec2-user
