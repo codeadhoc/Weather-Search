@@ -9,6 +9,6 @@ BeforeInstall:
      timeout: 10
      runas: root
 AfterInstall:
-   - location: bin/app-start
+   - location: ./bin/app-start
      timeout: 1200
      runas: root
